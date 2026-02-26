@@ -18,5 +18,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '全屏广告-自动更新游戏', // 我知道这是错误归类，这软件就是必须强制最新版，不然玩不了...
+      desc: '开屏弹窗更新自动确定',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.mihoyo.cloudgame.main.MiHoYoCloudMainActivity',
+          matches:
+            '[vid="mUpgradeDialogOK"][text="立即更新"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25571790',
+        },
+      ],
+    },
   ],
 });
