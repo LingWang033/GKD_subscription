@@ -160,5 +160,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 10,
+      name: '功能类-自动开启参量质变仪提醒',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.web2.MiHoYoWebActivity',
+          matches: '[text="提醒"] <n @[clickable=true] - [text="参量质变仪"]',
+          snapshotUrls: 'https://i.gkd.li/i/25608285', // 未开启提醒
+          excludeSnapshotUrls: 'https://i.gkd.li/i/25608302', // 已开启提醒
+        },
+      ],
+    },
   ],
 });
