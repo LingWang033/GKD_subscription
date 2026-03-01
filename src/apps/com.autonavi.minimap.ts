@@ -109,7 +109,7 @@ export default defineGkdApp({
           activityIds: 'com.autonavi.map.activity.NewMapActivity',
           matches: [
             '[vid="btn_qrscan"][desc="扫一扫"]',
-            'ViewGroup[desc.length>0] < ViewGroup + [desc="关闭"][clickable=true][visibleToUser=true] <<n [vid="quickservice"]',
+            'ViewGroup[desc.length>0] < ViewGroup + @[desc="关闭"][clickable=true][visibleToUser=true] <<n [vid="quickservice"]',
           ],
           exampleUrls:
             'https://m.gkd.li/57941037/071a07d2-c760-4f15-9359-f54bf51b6205',
