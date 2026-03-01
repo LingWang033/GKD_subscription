@@ -158,7 +158,6 @@ export default defineGkdApp({
         },
         {
           key: 2,
-          activityIds: '.ui.activity.HomeActivity',
           matches:
             'RelativeLayout[childCount=2] > RelativeLayout[vid="pdd"] + @FrameLayout[childCount=1][clickable=true][visibleToUser=true][text=null][vid="pdd"] > ImageView[childCount=0][visibleToUser=true]',
           exampleUrls: 'https://e.gkd.li/0f850878-2b6a-46c7-86aa-28329df0993c',
@@ -167,7 +166,6 @@ export default defineGkdApp({
         {
           key: 3,
           name: '多多视频金币提示',
-          activityIds: '.ui.activity.HomeActivity',
           matches: '[text^="看5分钟视频"] -2 Image',
           snapshotUrls: 'https://i.gkd.li/i/25088623',
         },
@@ -384,7 +382,6 @@ export default defineGkdApp({
           key: 0,
           name: '点击已确诊的疾病', // 否则无法继续
           actionMaximum: 1,
-          activityIds: '.activity.NewPageActivity',
           matches: '[text="选择已确诊的疾病"] + View > * > TextView[index=0]',
           snapshotUrls: 'https://i.gkd.li/i/25639924',
           excludeMatches: 'RelativeLayout > [text="请选择已确诊的疾病"]', // 排除匹配
