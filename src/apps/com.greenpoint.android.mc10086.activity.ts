@@ -118,44 +118,36 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
+          actionCd: 300,
           activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
           matches:
-            '[id="com.greenpoint.android.mc10086.activity:id/close_btn"]',
-          snapshotUrls: 'https://i.gkd.li/i/12662265',
+            '[vid="close_btn" || vid="close_btn_bottom" || vid="cmcc_digital_delete_float_icon_ll"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/12662265', // close_btn
+            'https://i.gkd.li/i/14570369', // close_btn_bottom
+            'https://i.gkd.li/i/25768816', // close_btn_bottom 和 cmcc_digital_delete_float_icon_ll
+          ],
+          exampleUrls: [
+            'https://m.gkd.li/57941037/276c7811-52f7-4379-8782-f9fb0b6cec1c',
+            'https://e.gkd.li/56c11ab7-227f-4b35-a2e0-8763dd557f69',
+          ],
         },
         {
           key: 1,
           activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
-          matches: '[vid="close_btn_bottom"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/276c7811-52f7-4379-8782-f9fb0b6cec1c',
-          snapshotUrls: 'https://i.gkd.li/i/14570369',
+          matches:
+            '[vid="tab_ai_tag"] >2 [vid="ai_floatingBar_close"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/25768547',
+          exampleUrls: 'https://e.gkd.li/c8c018e9-4082-43f2-8d6d-98bc99bd4806',
         },
         {
           key: 2,
           activityIds: 'com.cmccit.webview.ac.CommonHtml5Activity',
           matches:
-            '[text="余量查询"] > View > View > @Image[clickable=true][text!=null] <<n [vid="patmentwebview"]',
+            '@Image[clickable=true][text!=null] <<3 WebView[text="余量查询"] <<2 [vid="patmentwebview"]',
           exampleUrls:
             'https://m.gkd.li/57941037/69c6bf73-d901-4816-a9da-e4bcb0f4b9c6',
           snapshotUrls: 'https://i.gkd.li/i/14738550',
-        },
-        {
-          key: 3,
-          activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
-          anyMatches: [
-            '[vid="ai_floatingBar_close"] <<n [vid="tab_ai_tag"][clickable=true][visibleToUser=true]',
-            '[vid="digital_float_root_viwe"] > [vid="cmcc_digital_delete_float_icon"][visibleToUser=true][width<51 && height<51]',
-            '[vid="drag_content"] > [vid="drag_img"] - [vid="close_btn_bottom"][clickable=true][visibleToUser=true]',
-          ],
-          exampleUrls: [
-            'https://e.gkd.li/c8c018e9-4082-43f2-8d6d-98bc99bd4806',
-            'https://e.gkd.li/56c11ab7-227f-4b35-a2e0-8763dd557f69',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/25768547',
-            'https://i.gkd.li/i/25768816',
-          ],
         },
       ],
     },
