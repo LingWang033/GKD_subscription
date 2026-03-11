@@ -76,13 +76,18 @@ export default defineGkdApp({
         {
           key: 5,
           fastQuery: true,
-          activityIds: ['.activity.HomeActivity', '.mvi.home.HomeActivity'],
+          activityIds: [
+            '.activity.HomeActivity',
+            '.mvi.home.HomeActivity',
+            '.mvi.run.RunHistoryDetailActivity',
+          ],
           matches:
             '@ImageView[childCount=0] < FrameLayout[childCount=1] <2 FrameLayout[childCount=2] <2 FrameLayout[childCount=2] <2 FrameLayout[childCount=2] - FrameLayout > [text^="扭动或点击"]',
           exampleUrls: 'https://e.gkd.li/2debed48-37f2-43ec-8b0f-3a5e06c23ed1',
           snapshotUrls: [
             'https://i.gkd.li/i/17378546',
             'https://i.gkd.li/i/23145860',
+            'https://i.gkd.li/i/25904078',
           ],
         },
         {
