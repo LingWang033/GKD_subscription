@@ -91,11 +91,12 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: 'com.xunlei.downloadprovider.frame.MainTabActivity',
           matches:
-            '[vid="close_btn" || id="com.noah.dycsdk.dynamic_sdk:id/noah_interstitial_close_button"][visibleToUser=true]',
+            '[vid="close_btn" || id="com.noah.dycsdk.dynamic_sdk:id/noah_interstitial_close_button" || text="关闭"][visibleToUser=true]',
           exampleUrls: 'https://e.gkd.li/71c2dc44-a976-4910-8e44-26e39865406e',
           snapshotUrls: [
             'https://i.gkd.li/i/16388890',
             'https://i.gkd.li/i/25843616',
+            'https://i.gkd.li/i/25902800',
           ],
         },
         {
