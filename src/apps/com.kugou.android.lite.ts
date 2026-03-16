@@ -85,6 +85,9 @@ export default defineGkdApp({
           key: 0,
           matches:
             'FrameLayout > RelativeLayout > @ImageView[vid!=null][clickable=true][visibleToUser=true] +(2,3) ImageView[vid!=null]',
+          excludeMatches:
+            '[text="空间音效" || text="蝰蛇"][visibleToUser=true]',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/26030255', // 空间音效页面反复误触[desc="未选中空间音效"]
           snapshotUrls: [
             'https://i.gkd.li/i/14321713',
             'https://i.gkd.li/i/14321718',
