@@ -255,8 +255,7 @@ export default defineGkdApp({
         {
           key: 0,
           fastQuery: true,
-          activityIds:
-            'com.tencent.qqlive.redpacket.rain.OpenRedPacketActivity',
+          activityIds: '.redpacket.rain.OpenRedPacketActivity',
           matches:
             '@ImageView[clickable=true] < ViewGroup[childCount=5] < [id="android:id/content"]',
           exampleUrls:
@@ -266,7 +265,7 @@ export default defineGkdApp({
         {
           key: 1,
           fastQuery: true,
-          activityIds: 'com.tencent.qqlive.ona.activity.SplashHomeActivity',
+          activityIds: '.ona.activity.SplashHomeActivity',
           matches: '@RelativeLayout[clickable=true] + * >3 [text="立即预约"]',
           exampleUrls:
             'https://m.gkd.li/57941037/c8131a06-837a-4c42-9a70-9e8a7fe21334',
@@ -350,7 +349,7 @@ export default defineGkdApp({
           key: 0,
           name: '投屏页面广告',
           fastQuery: true,
-          activityIds: 'com.tencent.qqlive.ona.activity.VideoDetailActivity',
+          activityIds: '.ona.activity.VideoDetailActivity',
           matches: '@[clickable=true] - [text="广告"]',
           exampleUrls:
             'https://m.gkd.li/57941037/1b7518c9-4ca7-4905-8929-6f0130abf19f',
