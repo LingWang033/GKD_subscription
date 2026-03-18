@@ -93,6 +93,8 @@
 
 ![img](https://contrib.rocks/image?repo=Lin-arm/GKD_subscription&max=200&_v=439)
 
+![Alt](https://repobeats.axiom.co/api/embed/db6f46a4bdc4e760fb51976db276f1febef5bdce.svg "报告分析图")
+
 ## 📈Star History
 
 <a href="https://www.star-history.com/#Lin-arm/GKD_subscription&type=timeline&legend=top-left">
