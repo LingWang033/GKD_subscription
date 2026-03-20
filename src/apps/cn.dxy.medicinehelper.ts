@@ -31,33 +31,39 @@ export default defineGkdApp({
       desc: '点击带有叮当+x的去学习并返回',
       actionMaximum: 1,
       resetMatch: 'app', // 一天只有一次机会，还有防止key1反复触发
+      fastQuery: true,
       rules: [
         {
           key: 0,
+          name: '每日学指南',
           activityIds: '.article.dailylearn.DailyLearnComposeActivity',
           matches:
-            '@[clickable=true] > [text="去学习"] + [text^="+"][text$="丁当"]',
+            '[text="去学习"] + [text^="+"][text$="丁当"] <6 @[clickable=true] <7 ScrollView < View <4 * < * < ComposeView < [id="android:id/content"]',
           snapshotUrls: 'https://i.gkd.li/i/25246837',
+          exampleUrls: 'https://e.gkd.li/4af1bd7e-5a1a-4739-91b2-3bcc89431e3d',
         },
         {
           preKeys: [0],
+          name: '返回',
           activityIds:
             'cn.dxy.drugscomm.business.guide.simple.GuideSimpleComposeActivity',
-          matches: 'View[childCount=5][clickable=false][visibleToUser=true]',
+          matches:
+            '@*[childCount=5][clickable=false][visibleToUser=true] < * < * < ComposeView < [id="android:id/content"]',
           action: 'back',
           snapshotUrls: 'https://i.gkd.li/i/25292779',
         },
         {
           key: 1,
-          fastQuery: true,
+          name: '诊疗问答',
           activityIds: '.article.qa.QASheetActivity',
           matches:
-            '@[text="去学习"][visibleToUser=true] - [text=" 人学习过"] - * < View <<n ListView <<n FrameLayout - [vid="toolbar"]', // 叮当渲染进去了，需要严格匹配判断
+            '@[text="去学习"][visibleToUser=true] - [text=" 人学习过"] - * < View <4 * < ListView -3 * <<3 * -7 * < [id="root"] <<4 FrameLayout - [vid="toolbar"]', // 叮当渲染进去了，需要严格匹配判断
           snapshotUrls: 'https://i.gkd.li/i/25604101',
+          exampleUrls: 'https://e.gkd.li/f23f06ea-69f9-4b28-a520-60d64326e93e',
         },
         {
           preKeys: [1],
-          fastQuery: true,
+          name: '返回1',
           activityIds: 'cn.dxy.drugscomm.web.WebActivity',
           matches: '[vid="closeIcon"]',
           action: 'back',
