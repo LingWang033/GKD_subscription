@@ -193,6 +193,13 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/26031715',
           exampleUrls: 'https://e.gkd.li/59a14c6a-0e22-4a9e-9b9c-2f7eb462c69e',
         },
+        {
+          preKeys: [2],
+          matches: '[text$="升级为概念版VIP"]',
+          action: 'back',
+          snapshotUrls: 'https://i.gkd.li/i/26151202',
+          exampleUrls: 'https://e.gkd.li/8cecdfc9-1603-4be6-b362-83f802ab3548',
+        },
       ],
     },
     {
