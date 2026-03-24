@@ -960,6 +960,15 @@ export default defineGkdApp({
           exampleUrls: 'https://e.gkd.li/ac107188-5b53-4d25-9e81-0f5266470300',
         },
         {
+          key: 2,
+          preKeys: [1],
+          name: '再次确认',
+          matches:
+            'LinearLayout > @Button[clickable=true][visibleToUser=true] - [text="取消" || text="Cancel"]',
+          snapshotUrls: 'https://i.gkd.li/i/26223829',
+          exampleUrls: 'https://e.gkd.li/7f1a36d0-46a2-49fc-93f2-7f5672cb8dc1',
+        },
+        {
           preKeys: [1],
           name: '完成',
           matches:
