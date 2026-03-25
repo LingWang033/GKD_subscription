@@ -11,7 +11,8 @@ export default defineGkdApp({
       activityIds: '.activity.common.splash.SplashActivity',
       rules: [
         {
-          matches: '[vid="pyAdLayout"] > [vid="img_ad"] + [vid="count_down_view"][clickable=true][visibleToUser=true]',
+          matches:
+            '[vid="pyAdLayout"] > [vid="img_ad"] + [vid="count_down_view"][clickable=true][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/26231218',
         },
       ],
