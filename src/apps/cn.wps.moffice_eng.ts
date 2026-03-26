@@ -174,7 +174,7 @@ export default defineGkdApp({
           preKeys: [0],
           key: 1,
           matches:
-            '[text="签到成功"] -2 View[childCount=1] > @Image[text!=null][childCount=0] <<n [vid="push_tips_ptr_super_webview"]',
+            '[text="签到成功"] -2 * > @Image[text!=null] <<4 [index=parent.childCount.minus(2)] <n View <<2 WebView <<4 [vid="push_tips_ptr_super_webview"]',
           exampleUrls: 'https://e.gkd.li/c8c2f3cb-9bde-4a01-8eb6-145cf668993f',
           snapshotUrls: 'https://i.gkd.li/i/16382075',
         },
