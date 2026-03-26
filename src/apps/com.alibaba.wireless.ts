@@ -19,7 +19,7 @@ export default defineGkdApp({
             '.launch.home.V5HomeActivity',
             '.workbench.myali.MyAliSettingActivity',
           ],
-          matches: '[id="com.alibaba.wireless:id/update_button_cancel"]',
+          matches: '[vid="update_button_cancel"]',
           snapshotUrls: [
             'https://i.gkd.li/i/12684422',
             'https://i.gkd.li/i/12684426',
@@ -42,9 +42,9 @@ export default defineGkdApp({
           fastQuery: true,
           actionMaximum: 1,
           resetMatch: 'app',
-          activityIds: 'com.alibaba.wireless.launch.home.V5HomeActivity',
+          activityIds: '.launch.home.V5HomeActivity',
           matches:
-            '@Image[text*="FXa-124-124"][visibleToUser=true] <<n [id="com.alibaba.wireless:id/v_yacht_float_cell"]',
+            '@Image[text*="FXa-124-124"][visibleToUser=true] <<n [vid="v_yacht_float_cell"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13683509',
             'https://i.gkd.li/i/13683510',
