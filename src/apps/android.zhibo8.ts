@@ -10,8 +10,8 @@ export default defineGkdApp({
       desc: '点击[关闭]-点击[不感兴趣]',
       fastQuery: true,
       activityIds: [
-        'android.zhibo8.ui.contollers.main.MainActivity',
-        'android.zhibo8.ui.contollers.detail.DetailActivity',
+        '.ui.contollers.main.MainActivity',
+        '.ui.contollers.detail.DetailActivity',
       ],
       rules: [
         {
