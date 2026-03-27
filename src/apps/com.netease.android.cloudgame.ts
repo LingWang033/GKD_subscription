@@ -19,49 +19,53 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '局部广告',
+      name: '局部广告-卡片广告',
       fastQuery: true,
       activityIds: '.activity.MainActivity',
       rules: [
         {
           key: 0,
-          name: '底部横幅广告',
-          matches:
-            'ViewGroup[childCount=2] > [vid="banner_content"] + [vid="close_btn"][clickable=true][visibleToUser=false]',
-          snapshotUrls: 'https://i.gkd.li/i/25573674',
-          exampleUrls: 'https://e.gkd.li/bfe2d2a2-2199-425c-9729-9176aa4fb5bf',
+          name: '腾讯sdk',
+          anyMatches: [
+            '@ImageView[clickable=true] - * < RelativeLayout +n [text="精选推荐"][visibleToUser=true]',
+            '@ImageView[index=parent.childCount.minus(1)] < FrameLayout <3 FrameLayout +2 FrameLayout > LinearLayout > [text="立即下载"][visibleToUser=true]',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/i/25620233',
+            'https://i.gkd.li/i/26313264',
+            'https://i.gkd.li/i/25619258', // 形式2
+          ],
+          exampleUrls: [
+            'https://e.gkd.li/b1194340-db45-4ece-85a5-04447b12a2e9',
+            'https://e.gkd.li/d1a76240-5873-4e59-b856-9c59f395e46f',
+            'https://e.gkd.li/217312d8-5dd5-48c3-a6c2-448608674957', // 形式2
+          ],
         },
         {
           key: 1,
-          name: '福利页广告',
+          name: '百度sdk',
           anyMatches: [
-            '@ImageView[clickable=true][visibleToUser=true] -2 ImageView < RelativeLayout[childCount=3] <<n [vid="sign_ad_card"]',
-            'ImageView < * -2 * >n @ImageView[visibleToUser=true] < * -2 * < FrameLayout[childCount=3] <<n [vid="sign_ad_card"]',
+            '@ImageView[clickable=true] + RelativeLayout > * > [text="精选推荐"][visibleToUser=true]',
+            '@ImageView[clickable=true] - [text="查看详情"] -n RelativeLayout > [text$="广告"][visibleToUser=true]',
           ],
           snapshotUrls: [
-            'https://i.gkd.li/i/25574104',
-            'https://i.gkd.li/i/25619258',
+            'https://i.gkd.li/i/26312930',
+            'https://i.gkd.li/i/26313348',
+            'https://i.gkd.li/i/25573743', // 形式2
           ],
           exampleUrls: [
-            'https://e.gkd.li/91afc489-ac6e-452c-9b75-d15336e11989',
-            'https://e.gkd.li/217312d8-5dd5-48c3-a6c2-448608674957',
+            'https://e.gkd.li/3e89a49d-3c93-4b6d-8071-85ab6e75f761',
+            'https://e.gkd.li/04b09c16-20d5-41fe-bc72-72649fc06af7',
+            'https://e.gkd.li/217312d8-5dd5-48c3-a6c2-448608674957', // 形式2
           ],
         },
         {
           key: 2,
-          name: '个人页广告',
-          anyMatches: [
-            'ImageView -3 @ImageView[clickable=true][visibleToUser=true] - * < RelativeLayout[childCount=5] <<n [vid="mine_ui_ad_layout"]',
-            '@ImageView[clickable=true][visibleToUser=true] -n RelativeLayout > [text*="广告"]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/25573743',
-            'https://i.gkd.li/i/25620233',
-          ],
-          exampleUrls: [
-            'https://e.gkd.li/217312d8-5dd5-48c3-a6c2-448608674957',
-            'https://e.gkd.li/b1194340-db45-4ece-85a5-04447b12a2e9',
-          ],
+          name: '穿山甲sdk',
+          matches:
+            '@ImageView[index=parent.childCount.minus(1)] <n RelativeLayout -2 RelativeLayout <<6 [vid="sign_ad_layout"]',
+          snapshotUrls: 'https://i.gkd.li/i/25574104',
+          exampleUrls: 'https://e.gkd.li/91afc489-ac6e-452c-9b75-d15336e11989',
         },
       ],
     },
