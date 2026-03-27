@@ -46,5 +46,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 2,
+      name: '功能类-中断自动重连',
+      desc: '连接中断-尝试重连',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.mihoyo.gamecloud.playcenter.main.MainActivity',
+          matches:
+            '[vid="rootLayout"] > [vid="btnList"] > [vid="confirmTv"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/26311100',
+          exampleUrls: 'https://e.gkd.li/649824e2-e15e-4ddd-849a-b093357e3a7f',
+        },
+      ],
+    },
   ],
 });
