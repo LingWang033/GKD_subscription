@@ -998,5 +998,20 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 49,
+      name: '功能类-直接定位到聊天位置',
+      desc: '点引用消息-定位到聊天位置(左下角)',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.ui.chatting.TextPreviewUI',
+          matches:
+            'TextView[visibleToUser=true] < * < ScrollView + @LinearLayout[clickable=true] <<n [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/26310231',
+          exampleUrls: 'https://e.gkd.li/9b2b5ed6-bf1d-4b13-aba5-b51e978df562',
+        },
+      ],
+    },
   ],
 });
